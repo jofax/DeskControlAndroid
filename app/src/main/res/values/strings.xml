@@ -1,0 +1,387 @@
+<resources>
+    <!-- TODO: Generic Label Contents -->
+    <string name="app_error">Application Error</string>>
+    <string name="error_title">Error</string>
+    <string name="other_error">Something went wrong. Please try again.</string>
+    <string name="login_error">Unable to login with provided credentials.</string>
+    <string name="server_error">Cannot connect to server.</string>
+    <string name="account_locked">Account locked. Please contact administrator.</string>
+    <string name="account_verification_failed">Failed to verify your account.</string>
+    <string name="invalid_org_or_desk">Invalid organization or desk serial number. Do you want to proceed with guest account?</string>
+    <string name="new_organization_assigned">You need to login again to use the desk.</string>
+    <string name="information">Information</string>
+    <string name="notice">Notice</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="desk_not_registered">Desk is not registered. Do you want to proceed with guest account?</string>
+    <string name="serial_number_not_found">Cannot find serial number.</string>
+    <string name="unknow_error">Unknown Error</string>
+    <string name="account_verification">Please confirm your email address.</string>
+    <string name="no_profile_settings">Unable to get activity profile.</string>
+    <string name="bluetooth_off">Bluetooth is powered off. Please enable it on the phone settings.</string>
+    <string name="warning">Warning</string>
+    <string name="error_code_14">Please ensure that you did unpair the device on the phone settings and as well the device is on pairing mode.</string>
+    <string name="ble_connection_error">Unable to pair device. Please try again.</string>
+    <string name="invalid_pin_code">Invalid pin code. Please try again and make the sure the device is on pairing mode.</string>
+    <string name="ble_connection_error_device">Unable to pair device. Please try again and make the sure the device is on pairing mode.</string>
+    <string name="device_not_connected">Device not connected.</string>
+    <string name="desktop_has_priority">Desktop has priority.</string>
+    <string name="device_new_pair">Device disconnected, new paring request was initiated.</string>
+    <string name="desk_currently_booked">Desk is currently booked.</string>
+
+    <!-- TODO: Login/Registration/Activate/Forgot Password Label Contents -->
+    <string name="sp_default_description">Default Description</string>
+    <string name="email_placeholder">Email</string>
+    <string name="password_placeholder">Password</string>
+    <string name="lbl_login">Login</string>
+    <string name="lbl_register">New User</string>
+    <string name="lbl_guest">Guest</string>
+    <string name="lbl_forgot">Forgot Password</string>
+    <string name="verify_password_placeholder">Verify Password</string>
+    <string name="btn_connect_text">Connect</string>
+    <string name="welcome_string">Welcome</string>
+    <string name="unable_to_login">Unable to login with provided credentials.</string>
+    <string name="unable_to_register">Unable to register with provided credentials.</string>
+    <string name="email_password_required">Email and Password are required.</string>
+    <string name="activate_title">Activate account</string>
+    <string name="activate_placeholder">Activate Code</string>
+    <string name="resend_activation_title">Resend Activation Code</string>
+    <string name="login_empty">Username and Password is required.</string>
+    <string name="login_invalid">Invalid email or password.</string>
+    <string name="login_invalid_email">Invalid email address.</string>
+    <string name="login_email_required">Email Address Required.</string>
+    <string name="login_password_required">Password required.</string>
+    <string name="login_verify_password_required">Verify Password required.</string>
+    <string name="verify_password_password_not_equal">Password and verify password is not the same.</string>
+    <string name="login_empty_code">Validation code required.</string>
+    <string name="login_account_locked">Account is locked.</string>
+    <string name="login_verify_account">Please verify your account.</string>
+    <string name="login_invalid_code">Invalid activation code.</string>
+    <string name="login_no_user">Your email should be associated with organization, or connect to a a desk before you can proceed.</string>
+    <string name="login_activate_resend_code">Please check your registered email for the activation code.</string>
+    <string name="register_empty">All fields are required.</string>
+    <string name="register_verify_password">Verify Password</string>
+    <string name="register_password_mismatch">New and verify password mismatched.</string>
+    <string name="register_verify_password_required">Verify Password Required.</string>
+    <string name="register_register">Register</string>
+    <string name="forgot_empty_form">Password and verify password required.</string>
+    <string name="forgot_title">Forgot Password</string>
+    <string name="forgot_email_content">Send reset code to my email.</string>
+    <string name="forgot_reset_code">Enter Reset Code</string>
+    <string name="forgot_validate_code">Validate Code</string>
+    <string name="forgot_new_password">New Password</string>
+    <string name="forgot_verify_new_password">Verify New Password</string>
+    <string name="forgot_invalid_pincode">Invalid Pincode</string>
+    <string name="forgot_pincode_required">Pin code required.</string>
+    <string name="forgot_success_request_pincode">Please check your email for the reset password code.</string>
+    <string name="forgot_success_reset_password">Password has been reset, please login with your email and password.</string>
+    <string name="forgot_reset_screen_desc">Send reset code to my email</string>
+    <string name="password_reset_code">Reset Code</string>
+
+    <!-- TODO: Common Label Contents -->
+    <string name="success_title">Success!</string>
+    <string name="thanks">Thank you!</string>
+    <string name="signup_message">Please check your email to activate your account.</string>
+    <string name="profile_updated">Your profile has been updated.</string>
+    <string name="survey_success">We have received your response, continue to update to improve your health.</string>
+    <string name="request_success">Request completed.</string>
+    <string name="notice_title">Notice</string>
+    <string name="bluetooth_permission">Please allow the PulseEcho app to access the bluetooth service in your phone settings privacy section.</string>
+    <string name="back">Back</string>
+    <string name="submit">Submit</string>
+    <string name="save">Save</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="enable">Enable</string>
+    <string name="settings">Settings</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_agree">Agree</string>
+    <string name="app_name">PulseEcho</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <!-- TODO: Device List Label Contents -->
+    <string name="title_activity_device_list">DeviceListActivity</string>
+    <string name="title_device_list">Detected Devices</string>
+    <string name="alert_disconnected">Disconnected</string>
+    <string name="alert_disconnected_message">Disconnected or unable to connect to device.</string>
+    <string name="ble_device_list_title">Pair Device"</string>>
+
+    <!-- TODO: Home Label Contents -->
+    <string name="bank_stars">Bank Stars</string>
+    <string name="daily_title">Daily</string>
+    <string name="total_title">Total</string>
+    <string name="list_stars">List Stars</string>
+    <string name="manual_notifier">We’ve noticed that your desk has been inactive for too long. To achieve the most benefit from your Smartpods workstation, we recommend you move at least twice each hour.</string>
+    <string name="safety_title">Alert!</string>
+    <string name="safety_message">Please ensure that there are no obstacles around and under the desk.</string>
+    <string name="active_stars_title">Active Stars</string>
+    <string name="heart_fills_up">You have added progress in your heart, keep up the good work.</string>
+    <string name="risk_title">Health Risk</string>
+    <string name="risk_screen_title">Health Risk Scrore</string>
+    <string name="risk_low">Low</string>
+    <string name="risk_medium">Medium</string>
+    <string name="risk_high">High</string>
+
+    <!-- TODO: Desk Height Label Contents -->
+    <string name="deskHeight_title">Height Settings</string>
+    <string name="current_height">Current Height</string>
+    <string name="stand_title">Set Stand</string>
+    <string name="sit_title">Set sit</string>
+    <string name="set_standing_error">The standing position needs to be greater than the sit position.</string>
+    <string name="set_sitting_error">The sitting position needs to be greater than the stand position.</string>
+    <string name="sit_stand_diff_error">The difference between sitting and standing must be greater than.</string>
+    <string name="sit_stand_adjusted">Your sit or stand height has been adjusted on this desk.</string>
+
+    <!-- TODO: Statistics Label Contents -->
+    <string name="heart_statistics">Heart Statistics</string>
+    <string name="heart_accumulation">Heart Accumulation</string>
+    <string name="desk_statistic_title">Desk Statistics</string>
+    <string name="desk_heart_summary">Heart Summary</string>
+    <string name="desk_heart_average_fill">Average Time to fill Heart</string>
+    <string name="desk_heart_monthly_progress">Monthly Progress</string>
+    <string name="desk_heart_monthly_progress_hour_value">0 hour</string>
+    <string name="desk_heart_monthly_progress_value">0 %</string>
+    <string name="desk_heart_risk_assessment">Risk assessment</string>
+    <string name="desk_heart_hour_fill_">Risk assessment</string>
+
+    <string name="low_risk_description">Congratulations! <br />You have been classified with a LOW health risk score. This is in part due to amount of movement that you are successfully completing on a daily basis at your desk. Keep up the great work and continue to move regularly throughout the day.</string>
+    <string name="medium_risk_description">You are showing EARLY indicators associated to a MEDIUM health score. <br /> This could be due to a few reasons such as: <br /> your BMI, Health survey score or daily desk movements.</string>
+    <string name="high_risk_description">You are showing SEVERAL indicators associated to a HIGH health score. <br /> This could be due to a several reasons such as: <br /> your BMI, Health survey score or daily desk movements.</string>
+    <string name="risk_recommendations_title">Recommendations</string>
+    <string name="risk_status_title">Status</string>
+    <string name="pair_title">Pair</string>
+
+    <!-- TODO: User Profile Label Contents -->
+    <string name="user_profile_title">User Profile</string>
+    <string name="action_sheet_title">Please select and option.</string>
+    <string name="deparments_title">Please choose your department.</string>
+
+    <!-- TODO: Survey Label Contents -->
+    <string name="survey_title">Survey: MSK</string>
+    <string name="survey_nav_title">Survey</string>
+    <string name="survey_message">New survey available. Do you want to proceed?</string>
+    <string name="survey_no_answers">Survey questions are not answered. Please go over and update each question.</string>
+
+    <!-- TODO: Options/Controls Label Contents -->
+    <string name="control_title">Controls</string>
+    <string name="password_change">Password Change</string>
+    <string name="empty_form">All fields are required.</string>
+    <string name="email">Email</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="verify_password">Verify New Password</string>
+    <string name="save_title">Save</string>
+    <string name="old_password_required">Old Password Required.</string>
+    <string name="new_password_required">New Password Required.</string>
+    <string name="new_old_password">New and Verify password mismatched.</string>
+    <string name="success_password_changed">Password has been changed, please login again.</string>
+    <string name="safety_alert">Changing the safety sensitivity could affect the functioning and safety of the user working at this desk. Do want to change the safety values?</string>
+
+    <!-- TODO: Activity Profile Label Contents -->
+    <string name="activity_profile_title">Activity Profile</string>
+    <string name="activity_profile_preset">Pre Set<br />
+        Movements</string>
+    <string name="activity_profile_standing_time">Standing time</string>
+    <string name="activity_profile_recommended">Recommended</string>
+    <string name="activity_profile_first_30">1st \n30 min</string>
+    <string name="activity_profile_second_30">2nd \n30 min</string>
+    <string name="activity_profile_hour_cycle">1 Hour Cycle</string>
+    <string name="activity_profile_duration">Stand Duration</string>
+    <string name="activity_profile_make_me_healthy">Make Me Healthy</string>
+    <string name="activity_profile_five_preset">5 Min/Hr</string>
+    <string name="activity_profile_fifteen_preset">15 Min/Hr</string>
+    <string name="activity_profile_thirty_preset">30 Min/Hr</string>
+    <string name="activity_profile_btn_custom_30">30/30 Min</string>
+    <string name="activity_profile_btn_custom_60">60 Min</string>
+    <string name="activity_profile_sit_title_indicator">Sit</string>
+    <string name="activity_profile_stand_title_indicator">Stand</string>
+    <string name="activity_profile_profile_not_updated">Profile not update. Please try again.</string>
+    <string name="activity_profile_bottom_first_30">1st 30 min</string>
+    <string name="activity_profile_bottom_second_30">2nd 30 min</string>
+
+    <!-- TODO: Desk Mode Label Contents -->
+    <string name="desk_mode_title">Desk Mode</string>
+    <string name="desk_mode_auto_title">Automatic Desk Mode</string>
+    <string name="desk_mode_auto_desc">Runs through the activity cycle without the need of user acknowledgement.</string>
+    <string name="desk_mode_manual_title">Manual Desk Mode</string>
+    <string name="desk_mode_manual_desc">Runs through the activity cycle manually.</string>
+    <string name="desk_mode_interactive_title">Interactive Desk Mode</string>
+    <string name="desk_mode_interactive_desc">Runs through the activity cycle with the need of user acknowledgement.</string>
+
+    <!-- TODO: App Version Label Contents -->
+    <string name="app_version_title">Software Version</string>
+    <string name="app_ver">Application Version</string>
+    <string name="firmware_ver">Desk Firmware</string>
+    <string name="version_desc">Warning: This computer program is protected by copyright law and international treaties. Unauthorized reproduction or distribution of this program, or any portion of it, may result in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under the law.</string>
+    <string name="logout_title">Logout</string>
+    <string name="logout_desc1">Logging out will direct you to the login screen.</string>
+    <string name="logout_desc2">Would you like to logout?</string>
+
+    <!-- TODO: BMI/BMR/Calorie Label Contents -->
+    <string name="bmi_title">Body Mass Index</string>
+    <string name="bmi_formular">Weight / Height ( in2 )</string>
+    <string name="bmi_sub_title">This will classify you as:</string>
+    <string name="bmi_underweight">Underweight</string>
+    <string name="bmi_underweight_value">Underweight (&lt;18.5)</string>
+    <string name="bmi_healthy_weight">Healthy Weight (18.5 - 24.9)</string>
+    <string name="bmi_overweight">Overweight (25 - 29.9)</string>
+    <string name="bmi_obese">Obese (&gt;30)</string>
+    <string name="bmi_height">Height</string>
+    <string name="bmi_weight">Weight</string>
+    <string name="calorie_title">Estimated calorie expenditure</string>
+    <string name="calorie_content">This is the estimated number of calories that you will be burning while using Smartpods.</string>
+    <string name="bmr_title">Basal Metabolic Rate</string>
+    <string name="bmr_content">Basal metabolic rate (BMR) is the amount of energy expanded while at rest.</string>
+
+    <!-- TODO: Covid/Geofencing Label Contents -->
+    <string name="covid_title">Covid 19 Assessment</string>
+    <string name="covid_message">Please answer the following questions of Covid 19 health assessment.</string>
+    <string name="covid_not_enough_answers_message">Covid19 questions are not completed. Please go over and update each question.</string>
+    <string name="geofence_not_supported">Geofencing is not supported on this device!</string>
+    <string name="geofence_not_permitted">Your geotification is saved but will only be activated once you grant allow permission to access the device location.</string>
+    <string name="location_required">Location permission required</string>
+    <string name="location_required_message">Starting from Android M (6.0), the system requires apps to be granted location access in order to scan for BLE devices.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="fan_control">Fan Control</string>
+    <string name="fan_off">off</string>
+    <string name="fan_low">1</string>
+    <string name="fan_medium">2</string>
+    <string name="fan_high">3</string>
+    <string name="change">Change</string>
+    <string name="reset">Reset</string>
+
+    <string name="firstname_placeholder">First Name</string>
+    <string name="lastname_placeholder">Last Name</string>
+    <string name="gender_placeholder">Gender</string>
+    <string name="dob_placeholder">Year Of Birth</string>
+    <string name="height_placeholder">Height</string>
+    <string name="weight_placeholder">Weight</string>
+    <string name="lifestyle_placeholder">Lifestyle</string>
+    <string name="departments_placeholder">Department</string>
+    <string name="est_cal_day_placeholder">Est. Cal/Day</string>
+    <string name="bmi_placeholder">BMI</string>
+    <string name="bmr_placeholder">BMR</string>
+
+    <string name="desk_mode_automatic">Automatic</string>
+    <string name="desk_mode_interactive">Interactive</string>
+    <string name="desk_mode_manual">Manual</string>
+
+    <string name="supportMenu">Contact Support</string>
+    <string name="logoutMenu">Logout</string>
+    <string name="title_activity_pulse_registration">PulseRegistrationActivity</string>
+
+    <string name="desk_controls_indicator_lights_title">Indicator Lights</string>
+    <string name="desk_controls_brightness">Brightness</string>
+    <string name="desk_controls_safety_title">Safety</string>
+
+    <string name="desk_controls_sensitivity">Sensitivity</string>
+    <string name="desk_controls_duration">Duration</string>
+
+    <string name="desk_controls_away_delay_title">Away Delay</string>
+    <string name="desk_controls_capture_title">Capture</string>
+    <string name="desk_controls_legacy_title">Legacy detection</string>
+
+    <string name="desk_controls_sitting_title">Sitting</string>
+    <string name="desk_controls_standing_title">Standing</string>
+    <string name="desk_controls_inverted_title">Function Inverted</string>
+
+    <string name="desk_controls_default_brightness">LOW</string>
+
+    <string name="desk_controls_light_brightness_low">LOW</string>
+    <string name="desk_controls_light_brightness_dim">DIM</string>
+    <string name="desk_controls_light_brightness_high">HIGH</string>
+
+    <string name="risk_management_content1">15-30 min of standing/h</string>
+    <string name="risk_management_content2">Automatic or Interactive</string>
+    <string name="risk_management_content3">Height, weight and age</string>
+    <string name="risk_management_content4">Health survey</string>
+
+    <string name="statistic_mode_percentage">Mode Percentage</string>
+    <string name="statistic_up_down_per_hour">Up/Down Per Hour</string>
+    <string name="statistic_total_activity">Total Activity</string>
+    <string name="statistic_desk_activity">Desk Activity</string>
+    <string name="text_empty"> - </string>
+    <string name="no_survey_available"> No survey available. </string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+
+
+    <string name="survey_never_content">Never</string>
+    <string name="survey_sometimes_content">Sometimes</string>
+    <string name="survey_always_content">Always</string>
+
+    <string-array name="custom_30_durations">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+    </string-array>
+
+    <string-array name="custom_60_durations">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>55</item>
+    </string-array>
+
+    <string-array name="indicator_lights_equivalent_value">
+        <item>LOW</item>
+        <item>DIM</item>
+        <item>HIGH</item>
+    </string-array>
+
+    <string-array name="sensitivity_range_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="lifestyle_array">
+        <item>Sedentary</item>
+        <item>Moderately Active</item>
+        <item>Very Active</item>
+    </string-array>
+
+    <string-array name="gender_array">
+        <item>MALE</item>
+        <item>FEMALE</item>
+    </string-array>
+
+    <string-array name="height_conversions_array">
+        <item>Centimeters</item>
+        <item>Feet and Inches</item>
+    </string-array>
+
+    <string-array name="weight_conversions_array">
+        <item>Kilogram</item>
+        <item>Pounds</item>
+    </string-array>
+
+    <string name="sampleTextShort">Lorem ipsum dolor sit amet</string>
+    <string name="sampleTextLong">Lorem ipsum dolor sit amet, nam ne causae meliore comprehensam, ius in vivendo ponderum.</string>
+    <string name="actionButtonText">Button</string>
+
+</resources>

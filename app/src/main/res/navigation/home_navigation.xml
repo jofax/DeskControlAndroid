@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/homeHeartFragment">
+    <fragment
+        android:id="@+id/homeHeartFragment"
+        android:name="com.smartpods.android.pulseecho.Fragments.Home.HomeHeartFragment"
+        android:label="home_heart_fragment"
+        tools:layout="@layout/home_heart_fragment" >
+        <action
+            android:id="@+id/action_homeHeartFragment_to_heartAccumulationFragment2"
+            app:destination="@id/heartAccumulationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/heartAccumulationFragment"
+        android:name="com.smartpods.android.pulseecho.Fragments.Home.HeartAccumulationFragment"
+        android:label="heart_accumulation_fragment"
+        tools:layout="@layout/heart_accumulation_fragment" >
+        <action
+            android:id="@+id/action_heartAccumulationFragment_to_homeHeartFragment"
+            app:destination="@id/homeHeartFragment" />
+        <action
+            android:id="@+id/action_heartAccumulationFragment_to_homeHealthRiskFragment"
+            app:destination="@id/homeHealthRiskFragment">
+            <argument
+                android:name="risk_level"
+                android:defaultValue="-1"
+                app:argType="string"
+                app:nullable="false" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/homeHealthRiskFragment"
+        android:name="com.smartpods.android.pulseecho.Fragments.Home.HomeHealthRiskFragment"
+        android:label="home_health_risk_fragment"
+        tools:layout="@layout/home_health_risk_fragment" >
+        <action
+            android:id="@+id/action_homeHealthRiskFragment_to_heartAccumulationFragment"
+            app:destination="@id/heartAccumulationFragment" />
+    </fragment>
+</navigation>

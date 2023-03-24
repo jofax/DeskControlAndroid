@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "234330228364",
+    "firebase_url": "https://pulseecho-940c6.firebaseio.com",
+    "project_id": "pulseecho-940c6",
+    "storage_bucket": "pulseecho-940c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234330228364:android:45d3b886edf02b294fdda9",
+        "android_client_info": {
+          "package_name": "com.smartpods.android.pulseecho"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "234330228364-k4vicuoqd5cfmkrq1hmr2gu7k7eua95g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwZiPSG3v9EJ7CK39hYge_9zTPSmWrC7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "234330228364-k4vicuoqd5cfmkrq1hmr2gu7k7eua95g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "234330228364-afrp29pllaruj0f8fl47c5nuoo3blb1h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.smartpods.ios.pulseecho"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

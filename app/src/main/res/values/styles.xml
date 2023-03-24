@@ -1,0 +1,296 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/smartpods_white_text</item>
+        <item name="colorPrimaryDark">@color/smartpods_blue</item>
+        <item name="colorAccent">@color/smartpods_blue</item>
+        <item name="android:textColorPrimary">@color/smartpods_blue</item>
+<!--        <item name="windowActionBar">true</item>-->
+<!--        <item name="windowNoTitle">true</item>-->
+<!--        <item name="android:windowFullscreen">true</item>-->
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="PulseLoginButton">
+        <item name="font">@font/gotham_rounded_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/smartpods_blue</item>
+        <item name="android:textSize">@dimen/smartpods_text_size_small</item>
+        <item name="android:textColor">@color/smartpods_white_text</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="PulseTextField">
+        <item name="font">@font/gotham_rounded_bold</item>
+        <item name="android:textSize">@dimen/smartpods_textfield_size_small</item>
+        <item name="android:color">@color/smartpods_black</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:minLines">1</item>
+        <item name="android:lines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="colorAccent">@color/smartpods_blue</item>
+    </style>
+    <style name="SmartpodsSplashScreen" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">
+            @drawable/splash_screen_background
+        </item>
+    </style>
+    <style name="PulseRoundedButton">
+        <item name="font">@font/gotham_rounded_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/smartpods_text_size_small</item>
+<!--        <item name="android:background">@drawable/sp_rounded_button</item>-->
+        <item name="android:textColor">@color/smartpods_white_text</item>
+    </style>
+    <style name="PulseTitleStyle">
+        <item name="font">@font/gotham_rounded_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/smartpods_text_size_medium</item>
+        <item name="android:textColor">@color/smartpods_blue</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="PulseUserTitleStyle">
+        <item name="font">@font/gotham_rounded_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/smartpods_text_size_small</item>
+        <item name="android:textColor">@color/smartpods_blue</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="PulseMainTab" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabTextAppearance">@style/PulseMainTabTextAppearance</item>
+        <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
+    <style name="PulseMainTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="textAllCaps">true</item>
+    </style>
+    <style name="PulseConnectButton">
+        <item name="font">@font/gotham_rounded_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/smartpods_text_size_small</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/smartpods_green</item>
+    </style>
+    <style name="PulseScreenTitleStyle">
+        <item name="font">@font/gotham_rounded_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/smartpods_blue</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+    <style name="PulseScreenDescStyle">
+        <item name="font">@font/gotham_rounded_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/smartpods_gray</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizePresetSizes">@array/autosize_text_sizes</item>
+    </style>
+    <style name="PulseScreenDescStyle2">
+        <item name="font">@font/gotham_rounded_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/smartpods_gray</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizePresetSizes">@array/autosize_text_sizes</item>
+    </style>
+    <style name="PulseActivityProfilePreset">
+        <item name="font">@font/gotham_rounded_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/smartpods_gray</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:autoSizePresetSizes">@array/autosize_text_sizes</item>
+    </style>
+
+    <style name="PulseScreenDeskModeTitleStyle">
+        <item name="font">@font/gotham_rounded_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/smartpods_blue</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:autoSizePresetSizes">@array/autosize_text_sizes</item>
+    </style>
+    <style name="PulseScreenDeskModeDescStyle">
+        <item name="font">@font/gotham_rounded_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/smartpods_gray</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:autoSizePresetSizes">@array/autosize_text_sizes</item>
+
+    </style>
+
+    <style name="PulseScreenControlsHeaderStyle">
+        <item name="font">@font/gotham_rounded_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/smartpods_gray</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">16sp</item>
+
+    </style>
+
+    <style name="PulseScreenControlsTitleHeader">
+        <item name="font">@font/gotham_rounded_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/smartpods_blue</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">16sp</item>
+
+    </style>
+
+    <style name="PulseScreenNormalGrayTextStyle">
+        <item name="font">@font/gotham_rounded_bold</item>
+        <item name="android:textColor">@color/smartpods_gray</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:autoSizePresetSizes">@array/autosize_text_sizes</item>
+
+    </style>
+
+    <style name="PulseHeartAccumulationStats">
+        <item name="font">@font/gotham_rounded_book</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/smartpods_blue</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">25sp</item>
+
+    </style>
+
+    <style name="PulseHeartAccumulationStatsTitle">
+        <item name="font">@font/gotham_rounded_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/smartpods_gray</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">18sp</item>
+
+    </style>
+
+    <style name="PulseInteractiveTitle">
+        <item name="font">@font/gotham_rounded_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/smartpods_gray</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:autoSizePresetSizes">@array/autosize_text_sizes</item>
+
+    </style>
+
+    <style name="PulseInteractiveMovement">
+        <item name="font">@font/gotham_rounded_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/smartpods_gray</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:autoSizePresetSizes">@array/autosize_text_sizes</item>
+
+    </style>
+
+    <style name="PulseStatisticRecyclyerItemStyle">
+        <item name="font">@font/gotham_rounded_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/smartpods_white_text</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">32sp</item>
+
+    </style>
+
+    <declare-styleable name="SPGlowAnimation">
+        <attr name="layers" format="integer" />
+        <attr name="color1" format="color" />
+        <attr name="color2" format="color" />
+        <attr name="color3" format="color" />
+        <attr name="color4" format="color" />
+        <attr name="color5" format="color" />
+        <attr name="android:radius" format="dimension" />
+        <attr name="duration" format="integer" />
+        <attr name="startDelay" format="integer" />
+        <attr name="scaleMax" format="float" />
+    </declare-styleable>
+
+    <style name="ThemeOverlay.PrimaryPalette.Red" parent="Theme.MaterialComponents">
+        <item name="colorPrimary">#e53935</item>
+        <item name="colorPrimaryDark">#ab000d</item>
+    </style>
+
+    <style name="App" />
+    <style name="App.Widget" />
+
+    <style name="App.TextHeadline6" parent="@style/TextAppearance.MaterialComponents.Headline6">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="App.TextSubtitle1" parent="@style/TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="App.TextSubtitle1.Secondary">
+        <item name="android:textColor">@color/secondary_text</item>
+    </style>
+
+    <style name="App.Widget.TextAppearanceButton" parent="@style/TextAppearance.MaterialComponents.Button" />
+
+    <style name="App.Widget.Button.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/App.Widget.TextAppearanceButton</item>
+    </style>
+
+    <style name="App.Widget.Button.OutlinedButton.Primary">
+        <item name="android:textColor">@drawable/text_primary_background</item>
+    </style>
+
+    <style name="App.ConstraintLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="App.ConstraintLayout.MaxWidthLarge">
+        <item name="android:maxWidth">@dimen/max_width_large</item>
+    </style>
+
+
+    <style name="App.Widget.ScrollView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:clickable">true</item>
+        <item name="android:fillViewport">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+</resources>

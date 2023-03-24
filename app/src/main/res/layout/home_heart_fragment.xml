@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/heartMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@android:color/transparent"
+    tools:context=".Fragments.Home.HomeHeartFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/heartTopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/heartProgressLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/heartModeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:id="@+id/homeDeskModeContainer"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/homeCurrentDeskMode"
+                    style="@style/PulseScreenDescStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:text="Mode"
+                    android:textAlignment="center" />
+
+                <ImageView
+                    android:id="@+id/imgHomeDeskMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/manual" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/homeActivityTimerContainer"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/homeNextMove"
+                    style="@style/PulseScreenDescStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:text="- -"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/homeCountdown"
+                    style="@style/PulseScreenDescStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:text="00:00"
+                    android:textAlignment="center"
+                    app:autoSizePresetSizes="@array/autosize_text_sizes"
+                    app:autoSizeTextType="uniform" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/heartProgressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/heartStatsLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heartTopLayout">
+
+        <com.smartpods.android.pulseecho.CustomUI.CircularProgressIndicator
+            android:id="@+id/circularbackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:direction="clockwise"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/circularImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ble_not_connected" />
+
+        <com.smartpods.android.pulseecho.CustomUI.CircularProgressIndicator
+            android:id="@+id/circular_progress"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            app:direction="clockwise"
+            app:layout_constraintBottom_toBottomOf="@id/circularbackground"
+            app:layout_constraintEnd_toEndOf="@id/circularbackground"
+            app:layout_constraintStart_toStartOf="@id/circularbackground"
+            app:layout_constraintTop_toTopOf="@id/circularbackground" />
+
+
+        <com.smartpods.android.pulseecho.CustomUI.HeartProgressCircle
+            android:id="@+id/heartCircleProgressTimer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/circular_progress"
+            app:layout_constraintEnd_toEndOf="@id/circular_progress"
+            app:layout_constraintStart_toStartOf="@id/circular_progress"
+            app:layout_constraintTop_toTopOf="@id/circular_progress" />
+
+        <!--        <com.smartpods.android.pulseecho.CustomUI.CustomShapeProgressView-->
+        <!--            android:id="@+id/heartAnimated"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginStart="20dp"-->
+        <!--            android:layout_marginEnd="20dp"-->
+        <!--            android:layout_marginBottom="20dp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@id/heartCircleProgressTimer"-->
+        <!--            app:layout_constraintEnd_toEndOf="@id/heartCircleProgressTimer"-->
+        <!--            app:layout_constraintStart_toStartOf="@id/heartCircleProgressTimer" />-->
+
+        <com.smartpods.android.pulseecho.CustomUI.CustomShapeProgressView
+            android:id="@+id/heartAnimated"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1.2"
+            app:layout_constraintEnd_toEndOf="@id/heartCircleProgressTimer"
+            app:layout_constraintStart_toStartOf="@id/heartCircleProgressTimer"
+            app:layout_constraintTop_toTopOf="@+id/circularbackground"
+            app:layout_constraintVertical_bias="0.60" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/heartStatsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/heartMarqueeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heartProgressLayout">
+
+        <LinearLayout
+            android:id="@+id/heartStatsLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:id="@+id/heartStatsDailyContainer"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/heartStatsDailyTitle"
+                    style="@style/PulseScreenDescStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:text="Daily"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/heartStatsDailyCount"
+                    style="@style/PulseScreenDescStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="0"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/heartStatsTotalContainer"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/heartStatsTotalTitle"
+                    style="@style/PulseScreenDescStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:text="Total"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/heartStatsTotalCount"
+                    style="@style/PulseScreenDescStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="0"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/heartMarqueeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heartStatsLayout">
+
+        <LinearLayout
+            android:id="@+id/marqueeLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/manualModeNotifier"
+                style="@style/PulseScreenDescStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:ellipsize="none"
+                android:fadingEdge="horizontal"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activityProfileLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_border"
+    tools:context=".Fragments.Height.ActivityProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/presetLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toTopOf="@id/activityProfileContent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/presetLayoutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/heightCurrentLabel2"
+                style="@style/PulseScreenDescStyle2"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="@string/activity_profile_preset"
+                android:textAlignment="textStart"
+                tools:ignore="RtlCompat" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnPresetFive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:backgroundTintMode="screen"
+                    android:contentDescription="five preset"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/five" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/recommended_bg"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btnPresetFifteen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:backgroundTintMode="screen"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/fifteen" />
+
+                    <ImageButton
+                        android:id="@+id/btnPresetThirty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:backgroundTintMode="screen"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/thirty" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recommendedLabelLayout"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/presetLayoutContainer">
+
+            <TextView
+                android:id="@+id/recommendedLabel"
+                style="@style/PulseConnectButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/activity_profile_recommended"
+                android:textAlignment="textEnd"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activityProfileContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/activityProfileButtonContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/presetLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/activityProfileHeartProgressLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.smartpods.android.pulseecho.CustomUI.CircularProgressIndicator
+                android:id="@+id/activityProfileCircularbackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:direction="clockwise"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.smartpods.android.pulseecho.CustomUI.CircularProgressIndicator
+                android:id="@+id/activityProfileCircular_progress"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                app:direction="clockwise"
+                app:layout_constraintBottom_toBottomOf="@id/activityProfileCircularbackground"
+                app:layout_constraintEnd_toEndOf="@id/activityProfileCircularbackground"
+                app:layout_constraintStart_toStartOf="@id/activityProfileCircularbackground"
+                app:layout_constraintTop_toTopOf="@id/activityProfileCircularbackground" />
+
+
+            <com.smartpods.android.pulseecho.CustomUI.HeartProgressCircle
+                android:id="@+id/activityProfileCircleProgressTimer"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintBottom_toBottomOf="@id/activityProfileCircular_progress"
+                app:layout_constraintEnd_toEndOf="@id/activityProfileCircular_progress"
+                app:layout_constraintStart_toStartOf="@id/activityProfileCircular_progress"
+                app:layout_constraintTop_toTopOf="@id/activityProfileCircular_progress" />
+
+            <LinearLayout
+                android:id="@+id/presetTitleLayout"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/activityProfileCircleProgressTimer"
+                app:layout_constraintEnd_toEndOf="@id/activityProfileCircleProgressTimer"
+                app:layout_constraintStart_toStartOf="@+id/activityProfileCircleProgressTimer"
+                app:layout_constraintTop_toTopOf="@id/activityProfileCircleProgressTimer">
+
+                <TextView
+                    android:id="@+id/presetMinuteTitle"
+                    style="@style/PulseScreenDescStyle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/activity_profile_five_preset"
+                    android:textAlignment="center"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/standingTimeTitle"
+                    style="@style/PulseScreenDescStyle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/activity_profile_standing_time"
+                    android:textAlignment="center"
+                    tools:ignore="RtlCompat" />
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/activityCustomThirtyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/activityProfileThirthyContent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/activityProfileCustomBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/activityProfileCustomSecondView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:alpha="0.5"
+                        android:background="@drawable/custom_thirty_second_bg_off"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/activityProfileCustomFirstView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:alpha="0.5"
+                        android:background="@drawable/custom_thirty_first_bg_on"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                    <!--                    </com.smartpods.android.pulseecho.CustomUI.SPGlowAnimation>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activityProfileCustomMainContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/customProfile2ndControls"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/custom30secondPeriodTitle"
+                            style="@style/PulseScreenDescStyle2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_horizontal"
+                            android:text="@string/activity_profile_second_30"
+                            android:textAlignment="center"
+                            android:textColor="@color/smartpods_gray"
+                            tools:ignore="RtlCompat" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:id="@+id/btnEditSecond"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@android:color/transparent"
+                            android:backgroundTint="@android:color/transparent"
+                            android:backgroundTintMode="screen"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/edit_thirty" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/activityCustomThirtyProfileHeartProgressLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.smartpods.android.pulseecho.CustomUI.CircularProgressIndicator
+                            android:id="@+id/activityCustomThirtyProfileCircularbackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:direction="clockwise"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.smartpods.android.pulseecho.CustomUI.CircularProgressIndicator
+                            android:id="@+id/activityCustomThirtyProfileCircular_progress"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginBottom="2dp"
+                            app:direction="clockwise"
+                            app:layout_constraintBottom_toBottomOf="@id/activityCustomThirtyProfileCircularbackground"
+                            app:layout_constraintEnd_toEndOf="@id/activityCustomThirtyProfileCircularbackground"
+                            app:layout_constraintStart_toStartOf="@id/activityCustomThirtyProfileCircularbackground"
+                            app:layout_constraintTop_toTopOf="@id/activityCustomThirtyProfileCircularbackground" />
+
+
+                        <com.smartpods.android.pulseecho.CustomUI.HeartProgressCircle
+                            android:id="@+id/activityCustomThirtyProfileCircleProgressTimer"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginBottom="12dp"
+                            app:layout_constraintBottom_toBottomOf="@id/activityCustomThirtyProfileCircular_progress"
+                            app:layout_constraintEnd_toEndOf="@id/activityCustomThirtyProfileCircular_progress"
+                            app:layout_constraintStart_toStartOf="@id/activityCustomThirtyProfileCircular_progress"
+                            app:layout_constraintTop_toTopOf="@id/activityCustomThirtyProfileCircular_progress" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/customProfile1stControls"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/custom30firstPeriodTitle"
+                                style="@style/PulseScreenDescStyle2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/activity_profile_first_30"
+                                android:textAlignment="center"
+                                android:textColor="@color/smartpods_gray"
+                                tools:ignore="RtlCompat" />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <ImageButton
+                                android:id="@+id/btnEditFirst"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@android:color/transparent"
+                                android:backgroundTint="@android:color/transparent"
+                                android:backgroundTintMode="screen"
+                                android:contentDescription="TODO"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/edit_thirty" />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activityProfileButtonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/activityProfileBottomBtnContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activityProfileContent">
+
+        <LinearLayout
+            android:id="@+id/custom_activity_profile_btn_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/activityProfileCustomThirtyDuration"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/activityCustomDurationTitleLabel"
+                        style="@style/PulseScreenDescStyle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:text="@string/activity_profile_bottom_first_30"
+                        android:textAlignment="textStart"
+                        tools:ignore="RtlCompat" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/activityStandDurationLabel"
+                        style="@style/PulseScreenDescStyle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/activity_profile_duration"
+                        android:textAlignment="textStart" />
+
+                    <Spinner
+                        android:id="@+id/activityCustomDurationSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:contextClickable="true"
+                        android:textAlignment="textEnd" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/activitySitTitleIndicator"
+                        style="@style/PulseConnectButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="@string/activity_profile_sit_title_indicator"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/smartpods_gray"
+                        tools:ignore="RtlCompat" />
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="16dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/round_button_blue_border" />
+
+                    <TextView
+                        android:id="@+id/activityStandTitleIndicator"
+                        style="@style/PulseConnectButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="@string/activity_profile_stand_title_indicator"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/smartpods_gray"
+                        tools:ignore="RtlCompat" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="16dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/round_button_blue_background"
+                        android:backgroundTint="@color/smartpods_blue" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCustom30"
+                    style="@style/PulseRoundedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/sp_rounded_button"
+                    android:text="@string/activity_profile_btn_custom_30"
+                    android:textAllCaps="false"
+                    android:textColor="@color/smartpods_white_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/btnCustom60"
+                    style="@style/PulseRoundedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/sp_rounded_button"
+                    android:text="@string/activity_profile_btn_custom_60"
+                    android:textAllCaps="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activityProfileBottomBtnContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activityProfileButtonContainer">
+
+        <Button
+            android:id="@+id/btnMakeMeHealthy"
+            style="@style/PulseRoundedButton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/sp_rounded_button"
+            android:text="@string/activity_profile_make_me_healthy"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

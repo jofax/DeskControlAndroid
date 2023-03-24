@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_border"
+    tools:context=".Fragments.Statistics.UserDeskStatisticsFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshStatisticsPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/userDeskStatisticLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/statisticModePercentageLabelTitle"
+                style="@style/PulseScreenControlsHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/statistic_mode_percentage"
+                android:textAlignment="textStart"
+                tools:ignore="RtlCompat" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/percentagRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="10dp"
+                android:minWidth="100dp" />
+
+            <View
+                android:id="@+id/percentageDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/upDownPerHourLabelTitle"
+                    style="@style/PulseScreenControlsHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/statistic_up_down_per_hour"
+                    android:textAlignment="textStart"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/upDownPerHourValue"
+                    style="@style/PulseScreenControlsHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="0.00"
+                    android:textAlignment="textEnd"
+                    tools:ignore="RtlCompat" />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/upDownDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/totalActivityHourLabelTitle"
+                    style="@style/PulseScreenControlsHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/statistic_total_activity"
+                    android:textAlignment="textStart"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/totalActivityValue"
+                    style="@style/PulseScreenControlsHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="0%"
+                    android:textAlignment="textEnd"
+                    tools:ignore="RtlCompat" />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/totalActivityDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/statisticDeskActivityLabelTitle"
+                style="@style/PulseScreenControlsHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/statistic_desk_activity"
+                android:textAlignment="textStart"
+                tools:ignore="RtlCompat" />
+
+            <View
+                android:id="@+id/deskActivityeDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/deskActivityRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.smartpods.android.pulseecho.OtherLibs.EmptyState.EmptyStateView
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

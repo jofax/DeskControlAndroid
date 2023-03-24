@@ -1,0 +1,43 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="smartpods_textfield_size_small">15.0sp</dimen>
+    <dimen name="smartpods_text_size_small">15.0sp</dimen>
+    <dimen name="smartpods_text_size_medium">18.0sp</dimen>
+    <dimen name="smartpods_text_size_medium_mid">20.0sp</dimen>
+    <dimen name="smartpods_text_numbers_medium">27sp</dimen>
+    <dimen name="smartpods_text_size_large">21sp</dimen>
+    <dimen name="smartpods_text_numbers_large">32sp</dimen>
+    <dimen name="button_margin">10dp</dimen>
+    <dimen name="tab_icon_size">50dp</dimen>
+
+    <!-- Empty State Margin -->
+
+    <dimen name="margin_x_small">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">20dp</dimen>
+    <dimen name="margin_x_large">40dp</dimen>
+
+    <!-- Empty State endregion -->
+
+    <!-- Empty State Misc -->
+
+    <dimen name="max_width">420dp</dimen>
+    <dimen name="max_width_large">600dp</dimen>
+
+    <!-- endregion -->
+
+
+    <!--
+    Because the window insets on round devices are larger than 15dp, this padding only applies
+    to square screens.
+    -->
+    <dimen name="box_inset_layout_padding">0dp</dimen>
+
+    <!--
+    This padding applies to both square and round screens. The total padding between the buttons
+    and the window insets is box_inset_layout_padding (above variable) on square screens and
+    inner_frame_layout_padding (below variable) on round screens.
+    -->
+    <dimen name="inner_frame_layout_padding">5dp</dimen>
+</resources>

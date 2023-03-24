@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp">
+
+    <TextView
+        android:id="@+id/device_name"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:gravity="left|center"
+        android:paddingLeft="8dp"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Device Name" />
+
+    <TextView
+        android:id="@+id/mac_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/device_name"
+        tools:text="MAC: XX:XX:XX:XX:XX" />
+
+    <TextView
+        android:id="@+id/signal_strength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="-100 dBm" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/device_name"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <Button
+            android:id="@+id/btnConnectDevice"
+            style="@style/PulseConnectButton"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/btn_connect_text" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/connectProgressIndicator"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:indeterminate="true"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:visibility="gone"
+            app:indicatorColor="@color/smartpods_green" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

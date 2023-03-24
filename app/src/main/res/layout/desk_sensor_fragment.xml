@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sensorsConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@android:color/transparent"
+    tools:context=".Fragments.Settings.DeskSensorFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/indicatorLightsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/indicatorLightsTitle"
+                        style="@style/PulseScreenControlsTitleHeader"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/desk_controls_indicator_lights_title"
+                        android:textAlignment="textStart"
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+                        android:id="@+id/indicatorLightsDescription"
+                        style="@style/PulseScreenControlsHeaderStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/desk_controls_brightness"
+                        android:textAlignment="center"
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+                        android:id="@+id/indicatorLightsValue"
+                        style="@style/PulseScreenControlsHeaderStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:text="@string/desk_controls_default_brightness"
+                        android:textAlignment="textEnd"
+                        tools:ignore="RtlCompat" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btnDecreaseLight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:adjustViewBounds="true"
+                        android:backgroundTintMode="screen"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/minus_icon"
+                        android:tag="0" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/lightIndicatorSlider"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:stepSize="1.0"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                        android:theme="@style/ThemeOverlay.PrimaryPalette.Red"
+                        android:value="0.0"
+                        android:valueFrom="0.0"
+                        android:valueTo="2.0"
+                        app:haloColor="@color/smartpods_gray"
+                        app:labelBehavior="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:thumbColor="@color/smartpods_blue"
+                        app:tickColor="@android:color/transparent"
+                        app:trackColor="@color/smartpods_gray" />
+
+
+                    <ImageButton
+                        android:id="@+id/btnIncreaseLight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:adjustViewBounds="true"
+                        android:backgroundTintMode="screen"
+                        android:cropToPadding="false"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/plus_icon"
+                        android:tag="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/indicatorDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:id="@+id/sensitivityLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/safetyHeaderTitle"
+                        style="@style/PulseScreenControlsTitleHeader"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/desk_controls_safety_title"
+                        android:textAlignment="textStart"
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+                        android:id="@+id/safetyHeaderDescription"
+                        style="@style/PulseScreenControlsHeaderStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/desk_controls_sensitivity"
+                        android:textAlignment="center"
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+                        android:id="@+id/safetyHeaderValue"
+                        style="@style/PulseScreenControlsHeaderStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:text="0"
+                        android:textAlignment="textEnd"
+                        tools:ignore="RtlCompat" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btnDecreaseSafety"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:adjustViewBounds="true"
+                        android:backgroundTintMode="screen"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/minus_icon" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/safetySlider"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:stepSize="1"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                        android:theme="@style/ThemeOverlay.PrimaryPalette.Red"
+                        android:value="0.0"
+                        android:valueFrom="0.0"
+                        android:valueTo="10.0"
+                        app:haloColor="@color/smartpods_gray"
+                        app:labelBehavior="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:thumbColor="@color/smartpods_blue"
+                        app:tickColor="@android:color/transparent"
+                        app:trackColor="@color/smartpods_gray" />
+
+
+                    <ImageButton
+                        android:id="@+id/btnIncreaseSafety"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:adjustViewBounds="true"
+                        android:backgroundTintMode="screen"
+                        android:cropToPadding="false"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/plus_icon" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/sensitivityDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:id="@+id/awayLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/awayHeaderTitle"
+                        style="@style/PulseScreenControlsTitleHeader"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/desk_controls_away_delay_title"
+                        android:textAlignment="textStart"
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+                        android:id="@+id/awayHeaderDescription"
+                        style="@style/PulseScreenControlsHeaderStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/desk_controls_duration"
+                        android:textAlignment="center"
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+                        android:id="@+id/awayHeaderValue"
+                        style="@style/PulseScreenControlsHeaderStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:text="0"
+                        android:textAlignment="textEnd"
+                        tools:ignore="RtlCompat" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btnDecreaseAway"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:adjustViewBounds="true"
+                        android:backgroundTintMode="screen"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/minus_icon" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/awaySlider"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:stepSize="1.0"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                        android:theme="@style/ThemeOverlay.PrimaryPalette.Red"
+                        android:valueFrom="0.0"
+                        android:valueTo="5.0"
+                        android:value="0.0"
+                        app:haloColor="@color/smartpods_gray"
+                        app:labelBehavior="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:thumbColor="@color/smartpods_blue"
+                        app:tickColor="@android:color/transparent"
+                        app:trackColor="@color/smartpods_gray" />
+
+
+                    <ImageButton
+                        android:id="@+id/btnIncreaseAway"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:adjustViewBounds="true"
+                        android:backgroundTintMode="screen"
+                        android:cropToPadding="false"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/plus_icon" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/awayDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:id="@+id/legacyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCapturePrecense"
+                    style="@style/PulseRoundedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/sp_rounded_button"
+                    android:text="@string/desk_controls_capture_title" />
+
+                <TextView
+                    android:id="@+id/legacyHeaderDescription"
+                    style="@style/PulseScreenControlsHeaderStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/desk_controls_legacy_title"
+                    android:textAlignment="center"
+                    tools:ignore="RtlCompat" />
+
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchEnableLegacy"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.5"
+                    android:checked="true"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/legacyDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:id="@+id/sittingSensitivityLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sittingControlHeaderTitle"
+                        style="@style/PulseScreenControlsTitleHeader"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/desk_controls_sitting_title"
+                        android:textAlignment="textStart"
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+                        android:id="@+id/sittingControlHeaderDescription"
+                        style="@style/PulseScreenControlsHeaderStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/desk_controls_sensitivity"
+                        android:textAlignment="center"
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+                        android:id="@+id/sittingControlHeaderValue"
+                        style="@style/PulseScreenControlsHeaderStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:text="0"
+                        android:textAlignment="textEnd"
+                        tools:ignore="RtlCompat" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btnDecreaseSitting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:adjustViewBounds="true"
+                        android:backgroundTintMode="screen"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/minus_icon" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/sittingControlSlider"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:stepSize="1"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                        android:theme="@style/ThemeOverlay.PrimaryPalette.Red"
+                        android:value="0.0"
+                        android:valueFrom="0.0"
+                        android:valueTo="10.0"
+                        app:haloColor="@color/smartpods_gray"
+                        app:labelBehavior="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:thumbColor="@color/smartpods_blue"
+                        app:tickColor="@android:color/transparent"
+                        app:trackColor="@color/smartpods_gray" />
+
+
+                    <ImageButton
+                        android:id="@+id/btnIncreaseSitting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:adjustViewBounds="true"
+                        android:backgroundTintMode="screen"
+                        android:cropToPadding="false"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/plus_icon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sittingInvertedLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/sittingInvertedHeaderTitle"
+                        style="@style/PulseScreenControlsHeaderStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/desk_controls_inverted_title"
+                        android:textAlignment="center"
+                        tools:ignore="RtlCompat" />
+
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchInvertSitting"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0.5"
+                        android:checked="true"
+                        android:text="" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/sittingDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:id="@+id/standingSensitivityLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/standingControlHeaderTitle"
+                        style="@style/PulseScreenControlsTitleHeader"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/desk_controls_standing_title"
+                        android:textAlignment="textStart"
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+                        android:id="@+id/standingControlHeaderDescription"
+                        style="@style/PulseScreenControlsHeaderStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/desk_controls_sensitivity"
+                        android:textAlignment="center"
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+                        android:id="@+id/standingControlHeaderValue"
+                        style="@style/PulseScreenControlsHeaderStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:text="0"
+                        android:textAlignment="textEnd"
+                        tools:ignore="RtlCompat" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btnDecreaseStanding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:adjustViewBounds="true"
+                        android:backgroundTintMode="screen"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/minus_icon" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/standingControlSlider"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:stepSize="1"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                        android:theme="@style/ThemeOverlay.PrimaryPalette.Red"
+                        android:value="0.0"
+                        android:valueFrom="0.0"
+                        android:valueTo="10.0"
+                        app:haloColor="@color/smartpods_gray"
+                        app:labelBehavior="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:thumbColor="@color/smartpods_blue"
+                        app:tickColor="@android:color/transparent"
+                        app:trackColor="@color/smartpods_gray" />
+
+
+                    <ImageButton
+                        android:id="@+id/btnIncreaseStanding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:adjustViewBounds="true"
+                        android:backgroundTintMode="screen"
+                        android:cropToPadding="false"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/plus_icon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/standingInvertedLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/standingInvertedHeaderTitle"
+                        style="@style/PulseScreenControlsHeaderStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/desk_controls_inverted_title"
+                        android:textAlignment="center"
+                        tools:ignore="RtlCompat" />
+
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchInvertStanding"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0.5"
+                        android:checked="true"
+                        android:text="" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

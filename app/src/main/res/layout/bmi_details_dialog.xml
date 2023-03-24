@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/bmi_dialog_title"
+            style="@style/PulseScreenControlsHeaderStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="@string/bmi_title"
+            android:textAlignment="center"
+            tools:ignore="RtlCompat" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bmi_dialog_formula"
+                style="@style/PulseScreenControlsHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/bmi_formular"
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/bmi_dialog_classify"
+                style="@style/PulseScreenControlsHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/bmi_sub_title"
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/bmi_underweight"
+                style="@style/PulseScreenControlsHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/bmi_underweight_value"
+                android:textAlignment="center"
+                android:textColor="@color/smartpods_blue"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/bmi_healthy_weight"
+                style="@style/PulseScreenControlsHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/bmi_healthy_weight"
+                android:textAlignment="center"
+                android:textColor="@color/smartpods_green"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/bmi_overweight"
+                style="@style/PulseScreenControlsHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/bmi_overweight"
+                android:textAlignment="center"
+                android:textColor="@color/smartpods_yellow"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/bmi_obese"
+                style="@style/PulseScreenControlsHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/bmi_obese"
+                android:textAlignment="center"
+                android:textColor="@color/smartpods_red"
+                tools:ignore="RtlCompat" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        style="@style/PulseMainTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="0dp"
+        android:background="@android:color/transparent"
+        android:clipToPadding="false"
+        app:tabBackground="@android:color/transparent"
+        app:tabIconTint="@android:color/transparent"
+        app:tabIndicatorColor="@android:color/transparent"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="fixed"
+        app:tabPaddingEnd="0dp"
+        app:tabPaddingStart="0dp"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="@android:color/transparent">
+
+    </com.google.android.material.tabs.TabLayout>
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab_desk_stand_action"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_above="@+id/tabLayout"-->
+<!--        android:layout_alignRight="@+id/fab_desk_quick_controls"-->
+<!--        android:layout_gravity="bottom|right"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        app:fabSize="mini"-->
+<!--        android:layout_marginEnd="75dp"-->
+<!--        android:layout_marginBottom="75dp"-->
+<!--        android:layout_toStartOf="@+id/fab_desk_quick_controls"-->
+<!--        app:backgroundTint="@color/smartpods_blue"-->
+<!--        app:srcCompat="@drawable/desk_controls" />-->
+
+    <com.smartpods.android.pulseecho.CustomUI.SPCustomViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tabLayout"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="5dp"
+        tools:layout_editor_absoluteX="8dp">
+
+    </com.smartpods.android.pulseecho.CustomUI.SPCustomViewPager>
+
+        <Button
+            android:id="@+id/btnDivider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_above="@+id/tabLayout"
+            android:background="@drawable/border_with_drop_shadow"
+            android:layout_marginBottom="6dp" />
+
+        <ImageButton
+            android:id="@+id/btn_desk_control"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/tabLayout"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitEnd"
+            android:src="@drawable/desk_control_button_img" />
+
+        <LinearLayout
+            android:id="@+id/box_controls_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_above="@+id/tabLayout"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="bottom|right"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/smartpods_white_text"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_close_drawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside" />
+
+            <ImageButton
+                android:id="@+id/btn_sit_desk_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingTop="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/sit" />
+
+            <ImageButton
+                android:id="@+id/btn_stand_desk_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingTop="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/stand" />
+
+            <ImageButton
+                android:id="@+id/btn_stop_desk_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingTop="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/stop" />
+
+            <Button
+                android:id="@+id/button_paceholder2"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent" />
+        </LinearLayout>
+
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab_desk_quick_controls"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_above="@+id/tabLayout"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_gravity="bottom|right"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginEnd="10dp"-->
+<!--        android:layout_marginBottom="5dp"-->
+<!--        app:backgroundTint="@color/smartpods_blue"-->
+<!--        app:fabSize="mini"-->
+<!--        app:srcCompat="@drawable/desk_controls" />-->
+
+
+</RelativeLayout>
